@@ -2,7 +2,7 @@
 
 A free, open-source classroom tool for teaching **prompt injection** and LLM security to K–12 and early-college students.
 
-Designed by **Rita Sabri** (Miss Sabri), CS & Cybersecurity Educator at Cardozo Education Campus, Washington D.C. Built as part of the **Curriculum Patch** framework — a methodology for recontextualizing existing CS curricula to align with the NICE Cybersecurity Workforce Framework and modern AI threats.
+Designed by **Rita Sabri** , CS & Cybersecurity Educator at Cardozo Education Campus, Washington D.C. Built as part of the **Curriculum Patch** framework — a methodology for recontextualizing existing CS curricula to align with the NICE Cybersecurity Workforce Framework and modern AI threats.
 
 > "The LLM is not the tutor. It's the target."
 
