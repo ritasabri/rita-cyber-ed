@@ -23,7 +23,7 @@ Prompt injection is **OWASP's #1 LLM vulnerability** and Google's Cybersecurity 
 
 ## Try it
 
-Live demo (hosted via GitHub Pages): **[https://YOUR-USERNAME.github.io/rita-cyber-ed/](https://YOUR-USERNAME.github.io/rita-cyber-ed/)**
+Live demo (hosted via GitHub Pages): **[https://ritasabri.github.io/rita-cyber-ed/](https://ritasabri.github.io/rita-cyber-ed/)**
 
 > You'll need your own free Anthropic API key to use it — see below.
 
