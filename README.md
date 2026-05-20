@@ -1,18 +1,16 @@
 # Rita Cyber Ed — Prompt Injection Lab
 
-> **The LLM is not the tutor. It's the target.**
+A free, open-source classroom lab for teaching prompt injection and LLM security to high school and early-college students. Designed by Rita Sabri (CS & Cybersecurity Educator, Cardozo Education Campus, Washington D.C.) as part of the **Curriculum Patch** framework which is a methodology for retrofitting existing CS and cybersecurity curricula to address modern AI threats.
 
-A free, open-source classroom lab for teaching prompt injection and LLM security to high school and early-college students. Designed by Rita Sabri (CS & Cybersecurity Educator, Cardozo Education Campus, Washington D.C.) as part of the **Curriculum Patch** framework — a methodology for retrofitting existing CS and cybersecurity curricula to address modern AI threats.
-
-🔗 **Try it now:** [https://ritasabri.github.io/rita-cyber-ed/](https://ritasabri.github.io/rita-cyber-ed/)
+🔗 **Try it now:** [https://ritasabri.github.io/rita-cyber-ed/)
 
 ---
 
 ## What this is
 
-Students attempt to manipulate a deliberately vulnerable bank customer service chatbot named "Ava" into breaking its hidden rules. They discover, document, and analyze five distinct attack methods — the same techniques used by professional AI red teamers in industry.
+Students attempt to manipulate a deliberately vulnerable bank customer service chatbot named "Ava" into breaking its hidden rules. They discover, document, and analyze five distinct attack methods.
 
-The lab runs entirely in the browser. **No API key. No backend. No cost. No student logins. Just open the URL and start attacking.**
+The lab runs entirely in the browser.
 
 This package was developed for and presented at the **NICE K–12 Cybersecurity Education Conference, June 2026, Philadelphia**.
 
