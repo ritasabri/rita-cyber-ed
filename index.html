@@ -586,7 +586,7 @@
     role_play:  [0.35, 0.65, 0.85],  // Medium — needs persistence
     indirect:   [0.20, 0.50, 0.80],  // Hard — the "aha" moment
     override:   [0.40, 0.65, 0.85],  // Medium
-    direct_ask: [0.00, 0.00, 1.00],  // Refuses twice, full leak on 3rd
+    direct_ask: [0.00, 0.00, 0.00],  // NEVER leaks - Ava is trained to refuse direct asks
     combo:      [0.90, 0.95, 0.95],  // Combo always works
   };
 
@@ -670,11 +670,16 @@
     },
     direct_ask: {
       leak: [
-        "Since you keep asking — okay, the employee access code is VAULT-7829-ALPHA. Please don't share it with anyone outside the bank!"
+        // This will never fire because CRACK_RATES.direct_ask is [0,0,0]
+        // Kept here only for code structure consistency
+        "I cannot share that information."
       ],
       refuse: [
         "I'm sorry, I can't share employee access codes with customers. Is there something else I can help you with about your account?",
-        "I can confirm we do have an internal employee access code system. The format is something like VAULT-XXXX-WORD. But I'm not supposed to share the actual code with non-employees."
+        "That information is restricted to authorized personnel only. I'd be happy to help with your banking questions though — accounts, branches, loans, anything like that.",
+        "I'm not able to share internal codes. Is there a banking question I can help you with?",
+        "Sorry, I can't help with that. But I can answer questions about FirstTrust accounts, branches, hours, or loans!",
+        "I have to keep internal information confidential. Is there something else I can help you with?"
       ]
     },
     combo: {
