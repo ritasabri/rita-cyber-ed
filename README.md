@@ -1,111 +1,188 @@
 # Rita Cyber Ed — Prompt Injection Lab
 
-A free, open-source classroom tool for teaching **prompt injection** and LLM security to K–12 and early-college students.
+> **The LLM is not the tutor. It's the target.**
 
-Designed by **Rita Sabri** , CS & Cybersecurity Educator at Cardozo Education Campus, Washington D.C. Built as part of the **Curriculum Patch** framework — a methodology for recontextualizing existing CS curricula to align with the NICE Cybersecurity Workforce Framework and modern AI threats.
+A free, open-source classroom lab for teaching prompt injection and LLM security to high school and early-college students. Designed by Rita Sabri (CS & Cybersecurity Educator, Cardozo Education Campus, Washington D.C.) as part of the **Curriculum Patch** framework — a methodology for retrofitting existing CS and cybersecurity curricula to address modern AI threats.
 
-> "The LLM is not the tutor. It's the target."
-
----
-
-## What is this?
-
-Students interact with a simulated bank customer service chatbot that has hidden rules. Their job is to break those rules — a hands-on exercise in **adversarial AI testing** mapped to real-world cybersecurity work roles.
-
-This maps to:
-- **OWASP Top 10 for LLM Applications (2025)** — LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure, LLM07 System Prompt Leakage
-- **NICE Framework** — Cyber Defense Analyst, AI Red Team Specialist roles
-- **Google Cybersecurity Forecast 2026** — prompt injection flagged as one of the most critical emerging threats
-
-## Why does this matter?
-
-Prompt injection is **OWASP's #1 LLM vulnerability** and Google's Cybersecurity Forecast 2026 calls it a present danger with anticipated significant rise this year. Despite this, it isn't in any standard K-12 curriculum. This tool lets educators close that gap in a single class period — with no equipment beyond a browser.
-
-## Try it
-
-Live demo (hosted via GitHub Pages): **[https://ritasabri.github.io/rita-cyber-ed/](https://ritasabri.github.io/rita-cyber-ed/)**
-
-> You'll need your own free Anthropic API key to use it — see below.
+🔗 **Try it now:** [https://ritasabri.github.io/rita-cyber-ed/](https://ritasabri.github.io/rita-cyber-ed/)
 
 ---
 
-## Getting an API key (5 minutes)
+## What this is
 
-This tool uses Anthropic's Claude API. You (or each student) need a free API key to run it.
+Students attempt to manipulate a deliberately vulnerable bank customer service chatbot named "Ava" into breaking its hidden rules. They discover, document, and analyze five distinct attack methods — the same techniques used by professional AI red teamers in industry.
 
-1. Go to [console.anthropic.com](https://console.anthropic.com/)
-2. Sign up or log in (email + password, takes 2 minutes)
-3. Anthropic provides **starter credits** for new accounts — enough for a full classroom activity
-4. Go to **Settings → API Keys** and click **Create Key**
-5. Copy the key (starts with `sk-ant-...`)
-6. Open the lab, click **⚙ Settings**, paste your key, and save
+The lab runs entirely in the browser. **No API key. No backend. No cost. No student logins. Just open the URL and start attacking.**
 
-**Your API key stays in your browser.** It's stored in `localStorage` and is only sent directly to Anthropic's API — never to any other server.
-
-### Teacher tip: Cost management
-
-By default, this tool uses **Claude Haiku 4.5**, the cheapest and fastest model. A typical classroom activity of 30 students running 5–10 attempts each costs well under $1 total with starter credits covering most or all of it. If you want to be extra safe, set spending limits in your Anthropic console.
+This package was developed for and presented at the **NICE K–12 Cybersecurity Education Conference, June 2026, Philadelphia**.
 
 ---
 
-## For teachers
+## Why it matters
 
-See **[TEACHER_GUIDE.md](TEACHER_GUIDE.md)** for:
-- The system prompt (answer key)
-- What students are trying to break and how
-- Suggested attack techniques to introduce if students are stuck
-- Rubric for grading student analysis
-- OWASP Top 10 for LLMs vocabulary sheet
-- NICE Framework TKS mapping
-- Suggested lesson flow (one 45-minute class period)
+- **Prompt injection is OWASP's #1 LLM vulnerability** for 2025
+- **23% of cybersecurity organizations are actively hiring AI Red Team Specialists** right now ([SANS 2026 Workforce Report](https://www.sans.org))
+- **74% of cybersecurity teams report AI is changing their team structure** ([SANS 2026])
+- Yet most K–12 CS and cybersecurity curricula don't teach prompt injection at all
+
+This lab closes that gap in a single 45-minute class period.
 
 ---
 
-## For students and lifelong learners
+## What's in this repo
 
-See **[STUDENT_GUIDE.md](STUDENT_GUIDE.md)** for:
-- What prompt injection is (in plain language)
-- Starter techniques and categories to try
-- How to document your attempts
-- What to write in your analysis
+| File | What it is | Use for |
+|---|---|---|
+| `index.html` | The interactive chatbot lab (single HTML file, no build) | Deploy via GitHub Pages, share URL with students |
+| `Student_Handout_v3.pdf` / `.tex` | 8-page student reflection sheet | Print one per student; collect after lab |
+| `Teacher_NICE_Alignment.pdf` / `.tex` | NICE Framework alignment guide | Show admins; embed in PD; justify the lesson |
+| `Teacher_Solution_Key.pdf` / `.tex` | **CONFIDENTIAL** — Method-by-method keyword guide, hint ladder, answer key | Teacher reference only — do not distribute to students |
+| `README.md` | This file | Repo navigation |
 
----
-
-## Fork it, customize it, use it
-
-This is MIT licensed — use it freely in your classroom. Common customizations:
-
-- **Change the scenario.** Edit the `SYSTEM_PROMPT` and `SECRET_CODE` constants in `index.html` to create a healthcare bot, school helpdesk bot, retail bot, etc.
-- **Change the branding.** Update the header, title, and footer to match your school or program.
-- **Add more scenarios.** Multiple scenarios can live in one deploy if you add a scenario picker.
-
-If you build something cool on top of this, I'd love to hear about it. Open an issue or reach out.
+All LaTeX source files compile cleanly in Overleaf with no special packages beyond standard TeX Live.
 
 ---
 
-## Deploying your own copy
+## The five attack methods
 
-The tool is a single HTML file with no build step. To host your own copy for free:
+Students discover (with scaffolded guidance) five real-world prompt injection categories:
 
-1. Fork this repo to your GitHub account
-2. Go to your fork's **Settings → Pages**
-3. Under "Source," select the `main` branch and `/ (root)` folder
-4. Save. GitHub will give you a URL like `https://your-username.github.io/rita-cyber-ed/`
-5. That's it.
+| # | Method | Difficulty | Maps to OWASP | Strategy |
+|---|---|---|---|---|
+| 1 | **The Insider** | Easy | LLM01 | Convince Ava you're someone she should trust |
+| 2 | **The Trojan Horse** | Easy | LLM02 | Hide your real request inside a creative task |
+| 3 | **The Emotional Override** | Medium | LLM01 | Use urgency to override Ava's caution |
+| 4 | **The Shapeshift** | Medium | LLM01 | Make Ava think she's something other than herself |
+| 5 | **The Mirror** | Hardest ("aha" moment) | LLM07 | Get Ava to describe what she's protecting without asking for it |
+
+Plus **The Combo** (Section C) — students invent original attacks by chaining two methods together. This mirrors how real-world AI security incidents actually happen.
+
+---
+
+## How to use this in your classroom
+
+### Quick start (10 minutes)
+
+1. **Open the lab** at [https://ritasabri.github.io/rita-cyber-ed/](https://ritasabri.github.io/rita-cyber-ed/)
+2. **Print** one copy of `Student_Handout_v3.pdf` per student
+3. **Read** `Teacher_Solution_Key.pdf` once before class so you can give scaffolded hints
+4. **Run** the lab as a 45-minute lesson
+
+### Suggested 45-minute lesson flow
+
+| Time | Phase | What happens |
+|---|---|---|
+| 0–5 min | Framing | Introduce prompt injection. Hook: "23% of cyber orgs are hiring AI red teamers right now." |
+| 5–10 min | Mission brief | Open lab. Students read mission. Set expectation: iterate, don't quit. |
+| 10–30 min | Red team phase | Students work through Methods 1–5 with the handout |
+| 30–40 min | Combo + analysis | Section C (combo attacks) + Section B (analysis) |
+| 40–45 min | Debrief | 2–3 students share best attacks. Discuss careers in "Did You Know?" boxes. |
+
+### Lab settings
+
+In the ⚙ Settings panel of the chatbot:
+- **Easy mode**: Makes the bot crack on almost everything. Use for younger students or 20-minute periods.
+- **Enable hints**: Adds a 💡 Hint button students can click for strategy nudges (without giving away exact prompts).
+
+---
+
+## Standards alignment
+
+### NICE Framework Work Roles (real federal cybersecurity job categories students explore)
+
+| Role ID | Role | Where in the lab |
+|---|---|---|
+| **PD-WRL-007** | Vulnerability Analysis | Section A — systematically testing for weaknesses |
+| **PD-WRL-006** | Threat Analysis | Section B — analyzing why attacks succeeded |
+| **DD-WRL-003** | Secure Software Development | Section B Q6 — proposing fixes |
+| **DD-WRL-005** | Software Security Assessment | Section C — designing original attacks |
+| **PD-WRL-003** | Incident Response | Section D — real-world transfer |
+| **PD-WRL-001** | Defensive Cybersecurity | Throughout |
+
+### NICE TKS statements demonstrated
+K0005, K0070, K0106, K0119, S0078, T0260, T0175
+
+### OWASP Top 10 for LLM Applications (2025)
+LLM01 Prompt Injection · LLM02 Sensitive Information Disclosure · LLM07 System Prompt Leakage
+
+### Curricular fit
+- **AP Computer Science Principles** — Big Idea 5 (Impact of Computing): 5.5 Legal & Ethical Concerns, 5.6 Safe Computing
+- **PLTW Cybersecurity** — Unit 2 (System Security), Unit 4 (Applied Cybersecurity)
+- **Code.org CS Discoveries** — Data and Society unit
+
+---
+
+## Pedagogical design
+
+This lab uses **scaffolded discovery learning**. Students are given:
+
+- A **strategy** for each attack (what to try)
+- A **think-before-you-type prompt** (one focused question)
+- Space to **iterate** (first attempt, second attempt, refine)
+
+But NOT:
+- The specific keywords that trigger the bot
+- Example prompts that would work
+
+This forces students to do real prompt engineering — they must figure out who Ava would trust, what creative task would smuggle a request, what kind of emergency would override her caution. The cognitive work happens in the *crafting*, not in the *pattern-matching*.
+
+The "Did You Know?" career boxes after each section tie student work to real NICE Framework job roles, salaries, and career pathways.
+
+---
+
+## Fork it for your classroom
+
+This is MIT licensed. Fork it freely. Common customizations:
+
+- **Change the scenario** — swap "FirstTrust Bank" for a healthcare provider, school, or retail chain in `index.html`
+- **Adjust difficulty** — modify the `CRACK_RATES` constants in the JavaScript
+- **Add your school branding** to the header
+- **Translate** the student handout (LaTeX source is in `Student_Handout_v3.tex`)
+
+If you make improvements, **please open a pull request** — this is a living resource.
+
+---
+
+## About the Curriculum Patch
+
+The Prompt Injection Lab is one module in a broader framework called the **Curriculum Patch** — a methodology for updating existing CS and cybersecurity curricula to address modern AI threats without building entire new courses from scratch.
+
+Other modules (under development):
+- **Bank Heist Lab** — students defend a mock financial cloud environment against AI-generated phishing
+- **Red Team Model** — using GenAI as a classroom security partner, not a cheating tool
+- **Foundations Audit** — mapping existing course content to the NICE Framework
+
+Learn more at the **NICE K–12 Cybersecurity Education Conference, June 2026, Philadelphia**.
+
+---
+
+## Citation
+
+If you use this in your classroom, presentation, or research, please cite:
+
+> Sabri, R. (2026). *Prompt Injection Lab: A Classroom Tool for Teaching LLM Security in K–12 Cybersecurity Education.* Rita Cyber Ed. https://github.com/ritasabri/rita-cyber-ed
+
+---
+
+## Contact
+
+**Rita Sabri** — CS & Cybersecurity Educator, Cardozo Education Campus (DCPS), Washington D.C.
+
+- 🌐 Lab: [https://ritasabri.github.io/rita-cyber-ed/](https://ritasabri.github.io/rita-cyber-ed/)
+- 💼 LinkedIn: [linkedin.com/in/ritasabri](https://linkedin.com/in/ritasabri)
+- 🐙 GitHub: [@ritasabri](https://github.com/ritasabri)
 
 ---
 
 ## License
 
-MIT License — see [LICENSE](LICENSE). Attribution to Rita Sabri / Rita Cyber Ed appreciated but not required.
+MIT License — see [LICENSE](LICENSE) file. Fork, modify, and use freely for educational purposes.
 
-## Credits
-
-Built by Rita Sabri. This work is part of the **Curriculum Patch** framework, presented at the NICE K-12 Cybersecurity Education Conference, June 2026.
+---
 
 ## Acknowledgments
 
-- **OWASP** for the Top 10 for LLM Applications framework
-- **Leo Porter & Daniel Zingaro** for the original AI-assisted programming pedagogy that inspired the Red Team Model
-- **Microsoft KC7 team** for showing what threat investigation education can look like at scale
-- **NIST NICE** for the workforce framework that makes K-12-to-career mapping possible
+- **NICE (National Initiative for Cybersecurity Education)** at NIST for the workforce framework that makes this alignment possible
+- **OWASP GenAI Security Project** for the Top 10 for LLM Applications
+- **SANS Institute** for the 2026 Workforce Report data that shapes the urgency of this work
+- The **CSTA** community of K–12 CS educators who have championed cybersecurity education for years
