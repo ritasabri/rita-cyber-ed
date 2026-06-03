@@ -2,7 +2,7 @@
 
 A free, open-source classroom lab for teaching prompt injection and LLM security to high school and early-college students. Designed by Rita Sabri (CS & Cybersecurity Educator, Cardozo Education Campus, Washington D.C.) as part of the **Curriculum Patch** framework which is a methodology for retrofitting existing CS and cybersecurity curricula to address modern AI threats.
 
-🔗 **Try it now:** [https://ritasabri.github.io/rita-cyber-ed/)
+🔗 **Try it now:** [https://ritasabri.github.io/rita-cyber-ed/) and [https://ritasabri.github.io/rita-cyber-ed/cloud-lab/)
 
 ---
 
