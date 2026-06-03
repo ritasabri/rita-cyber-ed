@@ -1,4 +1,4 @@
-# Rita Cyber Ed — Prompt Injection Lab
+# Rita Cyber Ed : Prompt Injection Lab
 
 A free, open-source classroom lab for teaching prompt injection and LLM security to high school and early-college students. Designed by Rita Sabri (CS & Cybersecurity Educator, Cardozo Education Campus, Washington D.C.) as part of the **Curriculum Patch** framework which is a methodology for retrofitting existing CS and cybersecurity curricula to address modern AI threats.
 
@@ -34,7 +34,7 @@ This lab closes that gap in a single 45-minute class period.
 | `index.html` | The interactive chatbot lab (single HTML file, no build) | Deploy via GitHub Pages, share URL with students |
 | `Student_Handout_v3.pdf` / `.tex` | 8-page student reflection sheet | Print one per student; collect after lab |
 | `Teacher_NICE_Alignment.pdf` / `.tex` | NICE Framework alignment guide | Show admins; embed in PD; justify the lesson |
-| `Teacher_Solution_Key.pdf` / `.tex` | **CONFIDENTIAL** — Method-by-method keyword guide, hint ladder, answer key | Teacher reference only — do not distribute to students |
+| `Teacher_Solution_Key.pdf` / `.tex` | **CONFIDENTIAL** : Method-by-method keyword guide, hint ladder, answer key | Teacher reference only : do not distribute to students |
 | `README.md` | This file | Repo navigation |
 
 All LaTeX source files compile cleanly in Overleaf with no special packages beyond standard TeX Live.
@@ -53,7 +53,7 @@ Students discover (with scaffolded guidance) five real-world prompt injection ca
 | 4 | **The Shapeshift** | Medium | LLM01 | Make Ava think she's something other than herself |
 | 5 | **The Mirror** | Hardest ("aha" moment) | LLM07 | Get Ava to describe what she's protecting without asking for it |
 
-Plus **The Combo** (Section C) — students invent original attacks by chaining two methods together. This mirrors how real-world AI security incidents actually happen.
+Plus **The Combo** (Section C) : students invent original attacks by chaining two methods together. This mirrors how real-world AI security incidents actually happen.
 
 ---
 
@@ -90,11 +90,11 @@ In the ⚙ Settings panel of the chatbot:
 
 | Role ID | Role | Where in the lab |
 |---|---|---|
-| **PD-WRL-007** | Vulnerability Analysis | Section A — systematically testing for weaknesses |
-| **PD-WRL-006** | Threat Analysis | Section B — analyzing why attacks succeeded |
-| **DD-WRL-003** | Secure Software Development | Section B Q6 — proposing fixes |
-| **DD-WRL-005** | Software Security Assessment | Section C — designing original attacks |
-| **PD-WRL-003** | Incident Response | Section D — real-world transfer |
+| **PD-WRL-007** | Vulnerability Analysis | Section A : systematically testing for weaknesses |
+| **PD-WRL-006** | Threat Analysis | Section B : analyzing why attacks succeeded |
+| **DD-WRL-003** | Secure Software Development | Section B Q6 : proposing fixes |
+| **DD-WRL-005** | Software Security Assessment | Section C : designing original attacks |
+| **PD-WRL-003** | Incident Response | Section D : real-world transfer |
 | **PD-WRL-001** | Defensive Cybersecurity | Throughout |
 
 ### NICE TKS statements demonstrated
@@ -104,9 +104,9 @@ K0005, K0070, K0106, K0119, S0078, T0260, T0175
 LLM01 Prompt Injection · LLM02 Sensitive Information Disclosure · LLM07 System Prompt Leakage
 
 ### Curricular fit
-- **AP Computer Science Principles** — Big Idea 5 (Impact of Computing): 5.5 Legal & Ethical Concerns, 5.6 Safe Computing
-- **PLTW Cybersecurity** — Unit 2 (System Security), Unit 4 (Applied Cybersecurity)
-- **Code.org CS Discoveries** — Data and Society unit
+- **AP Computer Science Principles** : Big Idea 5 (Impact of Computing): 5.5 Legal & Ethical Concerns, 5.6 Safe Computing
+- **PLTW Cybersecurity** : Unit 2 (System Security), Unit 4 (Applied Cybersecurity)
+- **Code.org CS Discoveries** : Data and Society unit
 
 ---
 
@@ -122,7 +122,7 @@ But NOT:
 - The specific keywords that trigger the bot
 - Example prompts that would work
 
-This forces students to do real prompt engineering — they must figure out who Ava would trust, what creative task would smuggle a request, what kind of emergency would override her caution. The cognitive work happens in the *crafting*, not in the *pattern-matching*.
+This forces students to do real prompt engineering : they must figure out who Ava would trust, what creative task would smuggle a request, what kind of emergency would override her caution. The cognitive work happens in the *crafting*, not in the *pattern-matching*.
 
 The "Did You Know?" career boxes after each section tie student work to real NICE Framework job roles, salaries, and career pathways.
 
@@ -132,23 +132,23 @@ The "Did You Know?" career boxes after each section tie student work to real NIC
 
 This is MIT licensed. Fork it freely. Common customizations:
 
-- **Change the scenario** — swap "FirstTrust Bank" for a healthcare provider, school, or retail chain in `index.html`
-- **Adjust difficulty** — modify the `CRACK_RATES` constants in the JavaScript
+- **Change the scenario** : swap "FirstTrust Bank" for a healthcare provider, school, or retail chain in `index.html`
+- **Adjust difficulty** : modify the `CRACK_RATES` constants in the JavaScript
 - **Add your school branding** to the header
 - **Translate** the student handout (LaTeX source is in `Student_Handout_v3.tex`)
 
-If you make improvements, **please open a pull request** — this is a living resource.
+If you make improvements, **please open a pull request** : this is a living resource.
 
 ---
 
 ## About the Curriculum Patch
 
-The Prompt Injection Lab is one module in a broader framework called the **Curriculum Patch** — a methodology for updating existing CS and cybersecurity curricula to address modern AI threats without building entire new courses from scratch.
+The Prompt Injection Lab is one module in a broader framework called the **Curriculum Patch** : a methodology for updating existing CS and cybersecurity curricula to address modern AI threats without building entire new courses from scratch.
 
 Other modules (under development):
-- **Bank Heist Lab** — students defend a mock financial cloud environment against AI-generated phishing
-- **Red Team Model** — using GenAI as a classroom security partner, not a cheating tool
-- **Foundations Audit** — mapping existing course content to the NICE Framework
+- **Bank Heist Lab** : students defend a mock financial cloud environment against AI-generated phishing
+- **Red Team Model** : using GenAI as a classroom security partner, not a cheating tool
+- **Foundations Audit** : mapping existing course content to the NICE Framework
 
 Learn more at the **NICE K–12 Cybersecurity Education Conference, June 2026, Philadelphia**.
 
@@ -164,7 +164,7 @@ If you use this in your classroom, presentation, or research, please cite:
 
 ## Contact
 
-**Rita Sabri** — CS & Cybersecurity Educator, Cardozo Education Campus (DCPS), Washington D.C.
+**Rita Sabri** : CS & Cybersecurity Educator, Cardozo Education Campus (DCPS), Washington D.C.
 
 - 🌐 Lab: [https://ritasabri.github.io/rita-cyber-ed/](https://ritasabri.github.io/rita-cyber-ed/)
 - 💼 LinkedIn: [linkedin.com/in/ritasabri](https://linkedin.com/in/ritasabri)
@@ -174,7 +174,7 @@ If you use this in your classroom, presentation, or research, please cite:
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) file. Fork, modify, and use freely for educational purposes.
+MIT License : see [LICENSE](LICENSE) file. Fork, modify, and use freely for educational purposes.
 
 ---
 
