@@ -1,6 +1,6 @@
 # Rita Cyber Ed : Prompt Injection Lab
 
-A free, open-source classroom lab for teaching prompt injection and LLM security to high school and early-college students. Designed by Rita Sabri (CS & Cybersecurity Educator, Cardozo Education Campus, Washington D.C.) as part of the **Curriculum Patch** framework which is a methodology for retrofitting existing CS and cybersecurity curricula to address modern AI threats.
+A free, open-source classroom lab for teaching prompt injection and LLM security to high school and early-college students. Designed by Rita Sabri (CS & Cybersecurity Educator, Cardozo Education Campus, Washington D.C.) as part of the **Curriculum Patch** framework, which is a methodology for retrofitting existing CS and cybersecurity curricula to address modern AI threats. 
 
 🔗 **Try it now:** [https://ritasabri.github.io/rita-cyber-ed/) and [https://ritasabri.github.io/rita-cyber-ed/cloud-lab/)
 
@@ -12,7 +12,7 @@ Students attempt to manipulate a deliberately vulnerable bank customer service c
 
 The lab runs entirely in the browser.
 
-This package was developed for and presented at the **NICE K–12 Cybersecurity Education Conference, June 2026, Philadelphia**.
+This package was developed by Rita Sabri in Cardozo EC. It was presented at the **NICE K–12 Cybersecurity Education Conference, June 2026, Philadelphia**.
 
 ---
 
@@ -22,8 +22,6 @@ This package was developed for and presented at the **NICE K–12 Cybersecurity 
 - **23% of cybersecurity organizations are actively hiring AI Red Team Specialists** right now ([SANS 2026 Workforce Report](https://www.sans.org))
 - **74% of cybersecurity teams report AI is changing their team structure** ([SANS 2026])
 - Yet most K–12 CS and cybersecurity curricula don't teach prompt injection at all
-
-This lab closes that gap in a single 45-minute class period.
 
 ---
 
@@ -149,8 +147,6 @@ Other modules (under development):
 - **Bank Heist Lab** : students defend a mock financial cloud environment against AI-generated phishing
 - **Red Team Model** : using GenAI as a classroom security partner, not a cheating tool
 - **Foundations Audit** : mapping existing course content to the NICE Framework
-
-Learn more at the **NICE K–12 Cybersecurity Education Conference, June 2026, Philadelphia**.
 
 ---
 
