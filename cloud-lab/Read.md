@@ -1,4 +1,4 @@
-# Rita Cyber Ed — Cloud Bank Heist Lab
+# Cloud Bank Heist Lab
 
 A free, open-source classroom lab for teaching **cloud security misconfigurations** to high school and early-college students. Built by Rita Sabri (CS & Cybersecurity Educator, Cardozo Education Campus, Washington D.C.) as a module of the **Curriculum Patch** framework — a methodology for retrofitting existing CS and cybersecurity curricula to address modern cloud and AI threats. Runs entirely in the browser. **No AWS account required.**
 
@@ -8,7 +8,7 @@ A free, open-source classroom lab for teaching **cloud security misconfiguration
 
 ## What this is
 
-Students step into the role of a **junior security analyst at FirstTrust Bank**, which has just migrated to AWS. With read-only access to the production environment, they inspect six AWS services, flag the five real misconfigurations, and — crucially — learn to tell a true misconfiguration apart from a resource that is **public by design**. The lab runs as a 45-minute lesson and needs no AWS account, no API keys, and no budget.
+Students step into the role of a **junior security analyst at FirstTrust Bank**, which has just migrated to AWS. With read-only access to the production environment, they inspect six AWS services, flag the five real misconfigurations, and  learn to tell a true misconfiguration apart from a resource that is **public by design**. The lab runs as a 45-minute lesson and needs no AWS account, no API keys, and no budget.
 
 ---
 
@@ -16,8 +16,8 @@ Students step into the role of a **junior security analyst at FirstTrust Bank**,
 
 - **Cloud misconfigurations are among the leading causes of real-world breaches.** The 2019 Capital One breach (~100M records) traced back to a misconfigured S3 bucket and an over-permissive IAM role — the exact issues students hunt in this lab.
 - Every finding maps to a control in the **CIS AWS Foundations Benchmark v3.0**, the industry-standard cloud security checklist.
-- **Cloud security is one of the most in-demand skill areas** in cybersecurity — yet most K–12 CS and cybersecurity curricula don't teach it hands-on.
-- Built to clear the real barriers: no budget, no AWS account, no API keys, nothing for a school firewall to block.
+- **Cloud security is one of the most in-demand skill areas** in cybersecurity, and early exposure is necessary. 
+- Built by a teacher at a Title 1 school: open source, no budget, no AWS account, and no API keys.
 
 ---
 
@@ -26,14 +26,12 @@ Students step into the role of a **junior security analyst at FirstTrust Bank**,
 | File | What it is | Use for |
 |---|---|---|
 | `index.html` | Interactive audit lab (single HTML file, no build) | Deploy via GitHub Pages; share URL with students |
-| `Cloud_Bank_Heist_Lab_Student_Handout.tex` / `.pdf` | Student audit sheet: goal, warm-up, guided audit, CER exit ticket | Print one per student; collect after lab |
-| `Cloud_Bank_Heist_Teacher_Key.pdf` | **CONFIDENTIAL** — the five findings, the trap, and scaffolded hints | Teacher reference only; do not distribute |
-| `Cloud_Bank_Heist_NICE_Alignment.pdf` | NICE Framework alignment guide | Show admins; embed in PD; justify the lesson |
+| `Cloud_Bank_Heist_Lab_Student_Handout.tex` / `.pdf` | Student audit sheet: goal, warm-up, guided audit, CER exit ticket | Print one per student; collect after lab; **the handout provides NICE Framework alignment guide; please make sure to delete those when giving to students**.
 | `README.md` | This file | Folder navigation |
 
 ---
 
-## What students audit: six services, five findings
+## The audit: six services, five findings
 
 | # | Service | The issue | Severity | NICE Work Role |
 |---|---|---|---|---|
@@ -48,7 +46,7 @@ Students step into the role of a **junior security analyst at FirstTrust Bank**,
 
 ## How to use this in your classroom
 
-**Quick start (10 minutes):** open the lab, print one handout per student, skim the teacher key so you can give scaffolded hints, then run it as a 45-minute lesson.
+**Quick start (10 minutes):** open the lab, print one handout per student, skim the teacher key to give scaffolded hints, then run it as a 45-minute lesson.
 
 ### Suggested 45-minute lesson flow
 
@@ -98,20 +96,13 @@ Verified against the **NICE Workforce Framework for Cybersecurity v2.2.0**.
 
 ## Pedagogical design
 
-This lab uses **scaffolded discovery learning**. For each service, students get a neutral description and one focused "think before you flag" question — but never the answer or the specific setting to look for. The judgment happens in the inspecting. The **public-by-design trap** teaches the cost of false positives and the analyst skill of knowing when *not* to flag. The handout closes with a Think–Pair–Share, a Claim–Evidence–Reasoning exit ticket, and a self-reflection scale.
+This lab uses **scaffolded discovery learning**. For each service, students get a neutral description and one focused "think before you flag" question that you can modify as you please. The **public-by-design trap** teaches the cost of false positives and the analyst's skill of knowing when *not* to flag. The handout closes with a Think–Pair–Share, a Claim–Evidence–Reasoning exit ticket, and a self-reflection scale following the DCPS pushes for metacognitive questions and reasoning. 
 
 ---
 
-## Fork it for your classroom
+## Fork it for your classroom!
 
-MIT licensed — fork it freely. Common customizations:
-
-- **Change the scenario** — swap "FirstTrust Bank" for a hospital, school, or retailer in the `SERVICES` array in `index.html`
-- **Add or remove services** to fit your time block
-- **Add your school branding** to the header
-- **Translate** the student handout (LaTeX source is included)
-
-If you make improvements, please open a pull request — this is a living resource.
+If you make improvements, please open a pull request.
 
 ---
 
